@@ -1,0 +1,21 @@
+.Logos {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  align-items: center;
+}
+
+.Company {
+  border-bottom: 2px solid #ccc;
+}
+
+.Company div {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
