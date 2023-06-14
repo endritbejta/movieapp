@@ -1,15 +1,30 @@
 .Logos {
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
   align-items: center;
+  margin-top: 60px;
 }
 
 .Company {
-  border-bottom: 2px solid #ccc;
+  /* border-bottom: 2px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .Company div {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Company div:hover {
+  box-shadow: 4px 0px 0px 0px rgba(255, 0, 0) inset;
+  cursor: pointer;
+}
+
+.Company div span {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -17,5 +32,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.Company div img,
+.add img {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* object-fit: contain; */
+}
+
+.add {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 20px 10px;
 }
