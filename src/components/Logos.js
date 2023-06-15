@@ -14,37 +14,37 @@ const Logos = () => {
     <div className="Logos">
       <div className="Company">
         <div className="Company__Logo">
-          <Link style={{ backgroundColor: "red" }} to="/">
+          <a style={{ backgroundColor: "red" }} href="/">
             <img src={netflix} alt="netflix icon" />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to="hulu" style={{ backgroundColor: "green" }}>
+          <a href="hulu" style={{ backgroundColor: "green" }}>
             <img src={hulu} alt="hulu icon" />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to="appletvplus" style={{ backgroundColor: "#333" }}>
+          <a href="appletvplus" style={{ backgroundColor: "#333" }}>
             <img style={{ height: "70%" }} src={appleTv} alt="appleTv icon" />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to="disney" style={{ backgroundColor: "navy" }}>
+          <a href="disney" style={{ backgroundColor: "navy" }}>
             <img
               style={{ width: "100%", height: "90%" }}
               src={disney}
               alt="disney icon"
             />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to="hbomax" style={{ backgroundColor: "blue" }}>
+          <a href="hbomax" style={{ backgroundColor: "blue" }}>
             <img
               style={{ width: "90%", height: "85%" }}
               src={hbomax}
               alt="hbomax icon"
             />
-          </Link>
+          </a>
         </div>
       </div>
       <hr style={{ width: "40px", margin: "20px 0" }} />

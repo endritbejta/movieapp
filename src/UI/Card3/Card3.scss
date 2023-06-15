@@ -1,53 +1,80 @@
 .Card3 {
-    width: 450px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 20px;
-    // display: flex;
-    position: relative;
+  width: 450px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
 
-    img{
-        position: absolute;
-        // width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    position: absolute;
+    // width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    &__movie {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+  &__movie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 20px;
+    justify-content: space-between;
+
+    &info {
+      display: flex;
+      flex-direction: column;
+
+      &--title {
+        margin-bottom: 2px;
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      &--year {
+        font-size: 18px;
+        font-weight: lighter;
+        margin-bottom: 5px;
+      }
+
+      &--rating {
         display: flex;
-        align-items: flex-end;
-        padding: 20px 20px;
-        
-        &info {
-            display: flex;
-            flex-direction: column;
 
-            &--title {
-                font-size: 28px;
-                font-weight: 700;
-            }
-
-            &--year {
-                font-size: 16px;
-                font-weight: lighter;
-            }
-
-            &--rating {
-                display: flex;
-
-                &-logo {
-                    background-color: yellow;
-                    border-radius: 4px;
-                    margin-right: 5px;
-                    color: black;
-                    padding: 1px 3px;
-                }
-            }
+        &-logo {
+          background-color: yellow;
+          border-radius: 4px;
+          margin-right: 5px;
+          color: black;
+          padding: 1px 3px;
         }
+      }
     }
+
+    &right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 18px;
+      &--watch {
+        padding: 10px 15px;
+        background-color: rgba(225, 0, 0, 0.5);
+        border-radius: 20px;
+      }
+
+      &--add {
+        background-color: rgba(75, 72, 72, 0.4);
+        font-weight: 300;
+        width: 30px;
+        height: 30px;
+        font-size: 26px;
+        border-radius: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 }

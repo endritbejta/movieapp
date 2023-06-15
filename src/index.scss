@@ -1,5 +1,5 @@
 code {
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 * {
@@ -7,6 +7,8 @@ code {
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -17,5 +19,5 @@ code {
 body {
   background-color: #ccc;
   height: 100vh;
-  /* width: 100vw; */
+  width: 100vw;
 }

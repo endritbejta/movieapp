@@ -5,6 +5,7 @@ import Logos from "../components/Logos";
 import Menu from "../components/Menu";
 import Main from "../components/Main";
 import User from "../components/User";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
