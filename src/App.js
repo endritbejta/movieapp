@@ -1,13 +1,11 @@
-import "./App.css";
-
+import "./App.scss";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout/Layout";
 
+const router = createBrowserRouter([{ path: "/", element: <Layout /> }]);
+
 function App() {
-  return (
-    <div>
-      <Layout></Layout>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

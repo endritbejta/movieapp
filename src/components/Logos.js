@@ -1,5 +1,6 @@
 import React from "react";
-import classes from "./Logos.module.css";
+import "./Logos.scss";
+import { Link } from "react-router-dom";
 
 import netflix from "../UI/Logos/netflix-svgrepo-com.svg";
 import appleTv from "../UI/Logos/appletv-svgrepo-com.svg";
@@ -10,44 +11,44 @@ import hulu from "../UI/Logos/hulu-svgrepo-com.svg";
 
 const Logos = () => {
   return (
-    <div className={classes.Logos}>
-      <div className={classes.Company}>
-        <div>
-          <span style={{ backgroundColor: "red" }}>
+    <div className="Logos">
+      <div className="Company">
+        <div className="Company__Logo">
+          <Link style={{ backgroundColor: "red" }} to="/">
             <img src={netflix} alt="netflix icon" />
-          </span>
+          </Link>
         </div>
         <div>
-          <span style={{ backgroundColor: "green" }}>
+          <Link to="hulu" style={{ backgroundColor: "green" }}>
             <img src={hulu} alt="hulu icon" />
-          </span>
+          </Link>
         </div>
         <div>
-          <span style={{ backgroundColor: "#333" }}>
+          <Link to="appletvplus" style={{ backgroundColor: "#333" }}>
             <img style={{ height: "70%" }} src={appleTv} alt="appleTv icon" />
-          </span>
+          </Link>
         </div>
         <div>
-          <span style={{ backgroundColor: "navy" }}>
+          <Link to="disney" style={{ backgroundColor: "navy" }}>
             <img
               style={{ width: "100%", height: "90%" }}
               src={disney}
               alt="disney icon"
             />
-          </span>
+          </Link>
         </div>
         <div>
-          <span style={{ backgroundColor: "blue" }}>
+          <Link to="hbomax" style={{ backgroundColor: "blue" }}>
             <img
               style={{ width: "90%", height: "85%" }}
               src={hbomax}
               alt="hbomax icon"
             />
-          </span>
+          </Link>
         </div>
       </div>
       <hr style={{ width: "40px", margin: "20px 0" }} />
-      <div className={classes.add}>
+      <div className="add">
         {/* <img style={{ height: "80%" }} src={plus} alt="add" /> */}+
       </div>
     </div>
