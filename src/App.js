@@ -6,11 +6,13 @@ import Hulu from "./pages/Hulu";
 import Hbomax from "./pages/Hbomax";
 import Disney from "./pages/Disney";
 import Appletv from "./pages/Appletv";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",

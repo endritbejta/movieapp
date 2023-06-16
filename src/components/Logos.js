@@ -1,6 +1,6 @@
 import React from "react";
 import "./Logos.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import netflix from "../UI/Logos/netflix-svgrepo-com.svg";
 import appleTv from "../UI/Logos/appletv-svgrepo-com.svg";
@@ -14,37 +14,51 @@ const Logos = () => {
     <div className="Logos">
       <div className="Company">
         <div className="Company__Logo">
-          <a style={{ backgroundColor: "red" }} href="/">
-            <img src={netflix} alt="netflix icon" />
-          </a>
+          <NavLink
+            // className={(isActive) => (isActive ? "active" : undefined)}
+            to="/"
+            end={true}
+          >
+            <span style={{ backgroundColor: "red", padding: "5px" }}>
+              <img src={netflix} alt="netflix icon" />
+            </span>
+          </NavLink>
         </div>
         <div>
-          <a href="hulu" style={{ backgroundColor: "green" }}>
-            <img src={hulu} alt="hulu icon" />
-          </a>
+          <NavLink to="/hulu">
+            <span style={{ backgroundColor: "green", padding: "0 5px" }}>
+              <img src={hulu} alt="hulu icon" />
+            </span>
+          </NavLink>
         </div>
         <div>
-          <a href="appletvplus" style={{ backgroundColor: "#333" }}>
-            <img style={{ height: "70%" }} src={appleTv} alt="appleTv icon" />
-          </a>
+          <NavLink to="/appletvplus" end={true}>
+            <span style={{ backgroundColor: "#333" }}>
+              <img style={{ height: "70%" }} src={appleTv} alt="appleTv icon" />
+            </span>
+          </NavLink>
         </div>
         <div>
-          <a href="disney" style={{ backgroundColor: "navy" }}>
-            <img
-              style={{ width: "100%", height: "90%" }}
-              src={disney}
-              alt="disney icon"
-            />
-          </a>
+          <NavLink to="/disney">
+            <span style={{ backgroundColor: "navy" }}>
+              <img
+                style={{ width: "100%", height: "90%" }}
+                src={disney}
+                alt="disney icon"
+              />
+            </span>
+          </NavLink>
         </div>
         <div>
-          <a href="hbomax" style={{ backgroundColor: "blue" }}>
-            <img
-              style={{ width: "90%", height: "85%" }}
-              src={hbomax}
-              alt="hbomax icon"
-            />
-          </a>
+          <NavLink className="lol" to="/hbomax" end>
+            <span style={{ backgroundColor: "blue" }}>
+              <img
+                style={{ width: "90%", height: "85%" }}
+                src={hbomax}
+                alt="hbomax icon"
+              />
+            </span>
+          </NavLink>
         </div>
       </div>
       <hr style={{ width: "40px", margin: "20px 0" }} />

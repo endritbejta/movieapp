@@ -1,9 +1,0 @@
-.Main {
-  /* width: 100%; */
-  overflow: auto;
-}
-
-.Main nav ul {
-  list-style: none;
-  display: flex;
-}
