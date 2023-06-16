@@ -31,7 +31,7 @@ export const netflixMovies = [
   },
 ];
 
-const huluMovies = [
+export const huluMovies = [
   {
     id: "hulu-1",
     title: "Army of the Dead",
@@ -64,7 +64,7 @@ const huluMovies = [
   },
 ];
 
-const disneyMovies = [
+export const disneyMovies = [
   {
     id: "disney-1",
     title: "Army of the Dead",
@@ -97,7 +97,7 @@ const disneyMovies = [
   },
 ];
 
-const hboMovies = [
+export const hboMovies = [
   {
     id: "hbo-1",
     title: "Army of the Dead",
@@ -130,7 +130,7 @@ const hboMovies = [
   },
 ];
 
-const appleMovies = [
+export const appleMovies = [
   {
     id: "apple-1",
     title: "Army of the Dead",

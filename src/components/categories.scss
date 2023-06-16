@@ -1,0 +1,27 @@
+.categories {
+  /* width: 100%; */
+  overflow: auto;
+  font-size: 30px;
+  nav {
+    padding: 20px 30px;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      font-size: 24px;
+      li {
+        a:hover {
+          color: white;
+        }
+        a {
+          font-size: 18px;
+          color: rgb(124, 118, 118);
+          text-decoration: none;
+        }
+        a.active {
+          color: white;
+        }
+      }
+    }
+  }
+}

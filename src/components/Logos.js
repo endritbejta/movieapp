@@ -14,11 +14,7 @@ const Logos = () => {
     <div className="Logos">
       <div className="Company">
         <div className="Company__Logo">
-          <NavLink
-            // className={(isActive) => (isActive ? "active" : undefined)}
-            to="/"
-            end={true}
-          >
+          <NavLink to="/netflix">
             <span style={{ backgroundColor: "red", padding: "5px" }}>
               <img src={netflix} alt="netflix icon" />
             </span>
@@ -32,7 +28,7 @@ const Logos = () => {
           </NavLink>
         </div>
         <div>
-          <NavLink to="/appletvplus" end={true}>
+          <NavLink to="/appletvplus">
             <span style={{ backgroundColor: "#333" }}>
               <img style={{ height: "70%" }} src={appleTv} alt="appleTv icon" />
             </span>
@@ -50,7 +46,7 @@ const Logos = () => {
           </NavLink>
         </div>
         <div>
-          <NavLink className="lol" to="/hbomax" end>
+          <NavLink className="lol" to="/hbomax">
             <span style={{ backgroundColor: "blue" }}>
               <img
                 style={{ width: "90%", height: "85%" }}

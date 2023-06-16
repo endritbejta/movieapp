@@ -15,24 +15,54 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        path: "/netflix",
         element: <Netflix />,
+        children: [
+          {
+            path: "/netflix/:genre",
+            element: <h1>dd</h1>,
+          },
+        ],
       },
       {
         path: "/hulu",
         element: <Hulu />,
+        children: [
+          {
+            path: "/hulu/:genre",
+            element: <Hulu />,
+          },
+        ],
       },
       {
         path: "/hbomax",
         element: <Hbomax />,
+        children: [
+          {
+            path: "/hbomax/:genre",
+            element: <Hbomax />,
+          },
+        ],
       },
       {
         path: "/disney",
         element: <Disney />,
+        children: [
+          {
+            path: "/disney/:genre",
+            element: <Disney />,
+          },
+        ],
       },
       {
         path: "appletvplus",
         element: <Appletv />,
+        children: [
+          {
+            path: "/appletvplus/:genre",
+            element: <Appletv />,
+          },
+        ],
       },
     ],
   },
