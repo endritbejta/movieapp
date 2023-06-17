@@ -11,10 +11,8 @@ code {
   font-family: "Roboto", sans-serif;
 }
 
-:root {
-  --bg-color: #0d0d0f;
-  --bg-sidebar: #1a171e;
-}
+$primary: #0d0d0f;
+$secondary: #1a171e;
 
 body {
   background-color: #ccc;

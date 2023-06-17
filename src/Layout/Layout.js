@@ -1,17 +1,16 @@
 import React from "react";
-import classes from "./Layout.module.css";
+import "./Layout.scss";
 
-import Logos from "../components/Logos";
-import Menu from "../components/Menu";
-import Main from "../components/Main";
+import MainNav from "../components/MainNav";
 import User from "../components/User";
+import Options from "../components/Options";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className={classes.layout}>
-      <Logos />
-      <Menu />
-      <Main />
+    <div className="layout">
+      <MainNav />
+      <Outlet />
       <User />
     </div>
   );

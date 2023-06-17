@@ -1,6 +1,6 @@
 import React from "react";
 import "./categories.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Categories = () => {
   return (
@@ -8,33 +8,23 @@ const Categories = () => {
       <nav>
         <ul>
           <li>
-            <NavLink
-              to={window.location.pathname + `/movies`}
-              className={({ isActive }) => (isActive ? "active" : undefined)}
-            >
+            <NavLink to={`movies`} end>
               Movies
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to={window.location.pathname + "/series"}
-              className={({ isActive }) => (isActive ? "active" : undefined)}
-              end
-            >
+            <NavLink to={"series"} end>
               Series
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : undefined)}
-              to={window.location.pathname + "/tv-shows"}
-              end
-            >
+            <NavLink to={"tv-shows"} end>
               TV-Shows
             </NavLink>
           </li>
         </ul>
       </nav>
+      <Outlet />
     </div>
   );
 };

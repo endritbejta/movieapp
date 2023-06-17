@@ -1,26 +1,59 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import Layout from "./Layout/Layout";
-import Netflix from "./pages/Netflix";
-import Hulu from "./pages/Hulu";
-import Hbomax from "./pages/Hbomax";
-import Disney from "./pages/Disney";
-import Appletv from "./pages/Appletv";
+import Netflix from "./pages/Netflix/Netflix";
+import Hulu from "./pages/Hulu/Hulu";
+import Hbomax from "./pages/Hbomax/Hbomax";
+import Disney from "./pages/Disney/Disney";
+import Appletv from "./pages/AppleTv/Appletv";
 import Error from "./pages/Error";
+import Options from "./components/Options";
+import Categories from "./components/categories";
+import NetflixTv from "./pages/Netflix/NetflixTv";
+import NetflixSeries from "./pages/Netflix/NetflixSeries";
+import NetflixDiscovery from "./pages/Netflix/NetflixDiscovery";
+import NetflixCommunity from "./pages/Netflix/NetflixCommunity";
+import NetflixComingSoon from "./pages/Netflix/NetflixComingSoon";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Layout />,
     errorElement: <Error />,
     children: [
       {
-        path: "/netflix",
-        element: <Netflix />,
+        path: "netflix",
+        element: <Options />,
         children: [
           {
-            path: "/netflix/:genre",
-            element: <h1>dd</h1>,
+            path: "home",
+            element: <Categories />,
+            children: [
+              {
+                path: "movies",
+                element: <Netflix />,
+              },
+              {
+                path: "series",
+                element: <NetflixSeries />,
+              },
+              {
+                path: "tv-shows",
+                element: <NetflixTv />,
+              },
+            ],
+          },
+          {
+            path: "discovery",
+            element: <NetflixDiscovery />,
+          },
+          {
+            path: "community",
+            element: <NetflixCommunity />,
+          },
+          {
+            path: "coming-soon",
+            element: <NetflixComingSoon />,
           },
         ],
       },
@@ -55,7 +88,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "appletvplus",
+        path: "/appletvplus",
         element: <Appletv />,
         children: [
           {
