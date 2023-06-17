@@ -7,9 +7,7 @@ import "./pages.scss";
 const Hulu = () => {
   return (
     <div>
-      <Options />
-      <Categories />
-      <h1>AppleTvPlus</h1>
+      <h1>Hulu</h1>
     </div>
   );
 };
