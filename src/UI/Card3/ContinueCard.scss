@@ -1,0 +1,112 @@
+.card {
+  background-color: rgb(19, 46, 19);
+  max-width: 250px;
+  min-height: 160px;
+  min-width: 240px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 20px;
+  overflow: hidden;
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    background-color: rgba(#fff, 0.3);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 2px;
+    transition: all 0.2s ease;
+
+    .img {
+      width: 40%;
+    }
+  }
+
+  &__play:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    cursor: pointer;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 26px;
+    z-index: 1;
+    .title {
+      font-weight: bold;
+    }
+
+    .year {
+      font-weight: 400;
+    }
+
+    .play-tracker {
+      width: 100%;
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      gap: 5px;
+
+      .holder {
+        width: 100%;
+        position: relative;
+        .back {
+          position: absolute;
+          height: 2px;
+          background-color: #777;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+
+        .watched {
+          position: absolute;
+          height: 2px;
+          top: 0;
+          left: 0;
+          background-color: #eee;
+          //   width: 40%;
+        }
+        .watched::after {
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 100%;
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          background-color: #eee;
+          transform: translate((-50%, -50%));
+        }
+      }
+    }
+  }
+}
+
+.watched::after {
+  content: "";
+  //   width: 10px;
+  //   height: 10px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: green;
+}

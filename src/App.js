@@ -37,25 +37,7 @@ import AppletvCommunity from "./pages/AppleTv/AppletvCommunity";
 import AppleTvComingSoon from "./pages/AppleTv/AppleTvComingSoon";
 
 const url =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=08a143f47e4d4526636feab213f1dda2&page=1";
-
-// const router2 = createBrowserRouter([
-//   {
-//     path: "home",
-//     element: <Netflix />,
-//   },
-//   {
-//     path: 'about',
-//     element: <NetflixComingSoon/>,
-//     children: [{
-//       path: 'films',
-//       element: <NetflixTv/>,
-//       action: ()=> {fetch(
-//         //API
-//       )}
-//     }]
-//   }
-// ]);
+  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=14f2683b398dd16f58513bdf174ac5b1&page=1";
 
 const router = createBrowserRouter([
   {
@@ -78,7 +60,22 @@ const router = createBrowserRouter([
                   try {
                     const response = await fetch(url);
                     const res = await response.json();
-                    return res.results;
+
+                    const options = {
+                      method: "GET",
+                      headers: {
+                        accept: "application/json",
+                        Authorization:
+                          "Bearer 14f2683b398dd16f58513bdf174ac5b1",
+                      },
+                    };
+
+                    const response2 = await fetch(
+                      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_count.desc&api_key=14f2683b398dd16f58513bdf174ac5b1&page=1"
+                    );
+                    const res_con = await response2.json();
+
+                    return { res, res_con };
                   } catch (error) {
                     console.error(error);
                   }

@@ -4,8 +4,6 @@ import "./Card3.scss";
 const Card3 = ({ movie }) => {
   const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
-  const movies = [];
-
   return (
     <div className="Card3" key={movie.id}>
       <img src={IMG_PATH + movie.backdrop_path} alt={movie.title} />
