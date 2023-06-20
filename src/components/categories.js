@@ -8,7 +8,7 @@ const Categories = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to={`movies`} end>
+            <NavLink to={``} end>
               Movies
             </NavLink>
           </li>

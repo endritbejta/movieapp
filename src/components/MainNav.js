@@ -11,14 +11,12 @@ import Options from "./Options";
 // import plus from "../UI/Logos/plus-svgrepo-com.svg";
 
 const MainNav = (props) => {
-  const route = useLocation();
-  console.log(route);
   return (
     <>
       <div className="Logos">
         <div className="Company">
           <div className="Company__Logo">
-            <NavLink to="/netflix">
+            <NavLink to="/">
               <span style={{ backgroundColor: "red", padding: "5px" }}>
                 <img src={netflix} alt="netflix icon" />
               </span>
@@ -26,7 +24,7 @@ const MainNav = (props) => {
           </div>
           <div>
             <NavLink to="/hulu">
-              <span style={{ backgroundColor: "green", padding: "0 5px" }}>
+              <span style={{ backgroundColor: "#3fbc3c", padding: "0 5px" }}>
                 <img src={hulu} alt="hulu icon" />
               </span>
             </NavLink>
@@ -44,7 +42,7 @@ const MainNav = (props) => {
           </div>
           <div>
             <NavLink to="/disney">
-              <span style={{ backgroundColor: "navy" }}>
+              <span style={{ backgroundColor: "#01147b" }}>
                 <img
                   style={{ width: "100%", height: "90%" }}
                   src={disney}
@@ -55,7 +53,12 @@ const MainNav = (props) => {
           </div>
           <div>
             <NavLink className="lol" to="/hbomax">
-              <span style={{ backgroundColor: "blue" }}>
+              <span
+                style={{
+                  background:
+                    "linear-gradient(205deg, rgba(1,20,123,1) 0%, rgba(82,23,205,1) 49%, rgba(63,94,210,1) 100%)",
+                }}
+              >
                 <img
                   style={{ width: "90%", height: "85%" }}
                   src={hbomax}

@@ -36,6 +36,27 @@ import AppletvDiscovery from "./pages/AppleTv/AppletvDiscovery";
 import AppletvCommunity from "./pages/AppleTv/AppletvCommunity";
 import AppleTvComingSoon from "./pages/AppleTv/AppleTvComingSoon";
 
+const url =
+  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=08a143f47e4d4526636feab213f1dda2&page=1";
+
+// const router2 = createBrowserRouter([
+//   {
+//     path: "home",
+//     element: <Netflix />,
+//   },
+//   {
+//     path: 'about',
+//     element: <NetflixComingSoon/>,
+//     children: [{
+//       path: 'films',
+//       element: <NetflixTv/>,
+//       action: ()=> {fetch(
+//         //API
+//       )}
+//     }]
+//   }
+// ]);
+
 const router = createBrowserRouter([
   {
     path: "",
@@ -43,16 +64,25 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "netflix",
+        path: "",
         element: <Options />,
         children: [
           {
-            path: "home",
+            path: "",
             element: <Categories />,
             children: [
               {
-                path: "movies",
+                path: "",
                 element: <Netflix />,
+                loader: async () => {
+                  try {
+                    const response = await fetch(url);
+                    const res = await response.json();
+                    return res.results;
+                  } catch (error) {
+                    console.error(error);
+                  }
+                },
               },
               {
                 path: "series",
@@ -83,11 +113,11 @@ const router = createBrowserRouter([
         element: <Options />,
         children: [
           {
-            path: "home",
+            path: "",
             element: <Categories />,
             children: [
               {
-                path: "movies",
+                path: "",
                 element: <Hulu />,
               },
               {
@@ -119,11 +149,11 @@ const router = createBrowserRouter([
         element: <Options />,
         children: [
           {
-            path: "home",
+            path: "",
             element: <Categories />,
             children: [
               {
-                path: "movies",
+                path: "",
                 element: <Hbomax />,
               },
               {
@@ -155,11 +185,11 @@ const router = createBrowserRouter([
         element: <Options />,
         children: [
           {
-            path: "home",
+            path: "",
             element: <Categories />,
             children: [
               {
-                path: "movies",
+                path: "",
                 element: <Disney />,
               },
               {
@@ -191,11 +221,11 @@ const router = createBrowserRouter([
         element: <Options />,
         children: [
           {
-            path: "home",
+            path: "",
             element: <Categories />,
             children: [
               {
-                path: "movies",
+                path: "",
                 element: <Appletv />,
               },
               {

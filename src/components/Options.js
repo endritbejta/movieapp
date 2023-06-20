@@ -12,7 +12,7 @@ const Options = () => {
     <div className="menu">
       <div className="menu__main">
         <p className="menu__main--title">Menu</p>
-        <NavLink to={"home"} className="menu__mainoption">
+        <NavLink to={""} className="menu__mainoption">
           <img src={home} alt="home" style={{ width: "20px", fill: "red" }} />
           <p>Home</p>
         </NavLink>

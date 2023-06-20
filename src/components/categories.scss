@@ -1,9 +1,12 @@
+@import "../index.scss";
 .categories {
   /* width: 100%; */
   overflow: auto;
   font-size: 30px;
+  background-color: $primary;
   nav {
     padding: 20px 30px;
+    border-bottom: 3px solid $secondary;
     ul {
       display: flex;
       list-style: none;

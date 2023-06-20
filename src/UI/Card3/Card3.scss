@@ -1,15 +1,18 @@
 .Card3 {
-  width: 450px;
-  height: 300px;
+  min-width: 400px;
+  min-height: 250px;
   overflow: hidden;
   border-radius: 20px;
   position: relative;
+  margin-right: 20px;
+  // cursor: pointer;
 
   img {
     position: absolute;
     // width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
+    object-position: center;
   }
 
   &__movie {
@@ -26,7 +29,6 @@
     &info {
       display: flex;
       flex-direction: column;
-
       &--title {
         margin-bottom: 2px;
         font-size: 25px;
@@ -40,9 +42,12 @@
       }
 
       &--rating {
+        font-size: 16px;
         display: flex;
+        // display: inline-block;
 
         &-logo {
+          display: inline-block;
           background-color: yellow;
           border-radius: 4px;
           margin-right: 5px;
@@ -54,23 +59,33 @@
 
     &right {
       display: flex;
-      gap: 10px;
+      // gap: 10px;
       align-items: center;
-      font-size: 18px;
+      font-size: 12px;
+      min-width: 40%;
+
+      :hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
       &--watch {
+        transition: all 0.1s ease-in;
         padding: 10px 15px;
-        background-color: rgba(225, 0, 0, 0.5);
+        background-color: rgba(225, 0, 0, 0.7);
         border-radius: 20px;
+        margin-right: 10px;
       }
 
       &--add {
+        transition: all 0.1s ease-in;
         background-color: rgba(75, 72, 72, 0.4);
         font-weight: 300;
-        width: 30px;
-        height: 30px;
-        font-size: 26px;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
         border-radius: 100%;
-        padding: 20px;
+        // padding: 11px;
         display: flex;
         align-items: center;
         justify-content: center;
