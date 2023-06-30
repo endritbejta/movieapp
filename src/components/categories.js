@@ -1,6 +1,7 @@
 import React from "react";
 import "./categories.scss";
 import { NavLink, Outlet } from "react-router-dom";
+import Card3 from "../UI/Card3/Card3";
 
 const Categories = () => {
   return (

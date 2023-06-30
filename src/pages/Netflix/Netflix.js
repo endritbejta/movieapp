@@ -2,6 +2,7 @@ import Card3 from "../../UI/Card3/Card3";
 import { useLoaderData } from "react-router-dom";
 import "./pages.scss";
 import ContinueCard from "../../UI/Card3/ContinueCard";
+import TopratedCard from "../../UI/Card3/TopratedCard";
 
 const Netflix = () => {
   const data = useLoaderData();
@@ -26,6 +27,7 @@ const Netflix = () => {
           })}
         </div>
       </div>
+      <TopratedCard />
     </div>
   );
 };

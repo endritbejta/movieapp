@@ -1,0 +1,28 @@
+.section {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  a {
+    font-size: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.1s ease-in;
+    transform-origin: center;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+    color: red;
+  }
+}
+
+.sectionMovies {
+  display: flex;
+  overflow-x: auto;
+}
+
+.sectionMovies::-webkit-scrollbar {
+  display: none;
+}

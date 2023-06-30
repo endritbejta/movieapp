@@ -16,7 +16,7 @@ const Options = () => {
           <img src={home} alt="home" style={{ width: "20px", fill: "red" }} />
           <p>Home</p>
         </NavLink>
-        <NavLink to={"discovery"} end>
+        <NavLink to={"discovery"}>
           <img
             src={discovery}
             alt="compass logo"
@@ -24,7 +24,7 @@ const Options = () => {
           />
           <p>Discovery</p>
         </NavLink>
-        <NavLink to={"community"} className="menu__mainoption" end>
+        <NavLink to={"community"} className="menu__mainoption">
           <img
             src={community}
             alt="users"

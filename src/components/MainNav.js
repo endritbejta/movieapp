@@ -16,21 +16,21 @@ const MainNav = (props) => {
       <div className="Logos">
         <div className="Company">
           <div className="Company__Logo">
-            <NavLink to="/">
+            <NavLink to="">
               <span style={{ backgroundColor: "red", padding: "5px" }}>
                 <img src={netflix} alt="netflix icon" />
               </span>
             </NavLink>
           </div>
           <div>
-            <NavLink to="/hulu">
+            <NavLink to="hulu">
               <span style={{ backgroundColor: "#3fbc3c", padding: "0 5px" }}>
                 <img src={hulu} alt="hulu icon" />
               </span>
             </NavLink>
           </div>
           <div>
-            <NavLink to="/appletvplus">
+            <NavLink to="appletvplus">
               <span style={{ backgroundColor: "#333" }}>
                 <img
                   style={{ height: "70%" }}
@@ -41,7 +41,7 @@ const MainNav = (props) => {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/disney">
+            <NavLink to="disney">
               <span style={{ backgroundColor: "#01147b" }}>
                 <img
                   style={{ width: "100%", height: "90%" }}
@@ -52,7 +52,7 @@ const MainNav = (props) => {
             </NavLink>
           </div>
           <div>
-            <NavLink className="lol" to="/hbomax">
+            <NavLink to="hbomax">
               <span
                 style={{
                   background:
@@ -69,9 +69,7 @@ const MainNav = (props) => {
           </div>
         </div>
         <hr style={{ width: "40px", margin: "20px 0" }} />
-        <div className="add">
-          {/* <img style={{ height: "80%" }} src={plus} alt="add" /> */}+
-        </div>
+        <div className="add">+</div>
       </div>
       {/* <Outlet /> */}
     </>
